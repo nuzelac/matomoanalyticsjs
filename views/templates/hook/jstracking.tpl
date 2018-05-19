@@ -47,12 +47,6 @@
         _paq.push(['setReferralCookieTimeout', '{$PIWIK_RCOOKIE_TIMEOUT}']);
         {/if}
         _paq.push(['enableLinkTracking']);
-    {if isset($PIWIK_UUID)}
-        _paq.push(['setUserId', '{$PIWIK_UUID}']);
-        _paq.push(['setCustomVariable', 1, "First Name", "{$cookie->customer_firstname}", "visit"]);
-        _paq.push(['setCustomVariable', 2, "Last Name", "{$cookie->customer_lastname}", "visit"]);
-
-    {/if}
     {if isset($smarty.request.email)}
         _paq.push(['setUserId', '{$smarty.request.email}']);
 
